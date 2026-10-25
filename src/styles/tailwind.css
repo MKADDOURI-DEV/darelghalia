@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F6F0E6;
+  --foreground: #38271F;
+  --primary: #142A24;
+  --primary-foreground: #F6F0E6;
+  --secondary: #DDD2C1;
+  --secondary-foreground: #38271F;
+  --accent: #B69A62;
+  --accent-foreground: #142A24;
+  --muted: #EAE1D2;
+  --muted-foreground: #6B5A4C;
+  --card: #FBF7EF;
+  --card-foreground: #38271F;
+  --border: #CDBFA8;
+  --input: #CDBFA8;
+  --ring: #B69A62;
+  --radius: 2px;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-arabic: var(--font-naskh), serif;
+  --success: #2F6B4F;
+  --success-foreground: #F6F0E6;
+  --warning: #A8741A;
+  --warning-foreground: #142A24;
+  --destructive: #9B2C2C;
+  --destructive-foreground: #F6F0E6;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  html[dir='rtl'] body {
+    font-family: var(--font-arabic), var(--font-sans);
+  }
+  html[dir='rtl'] .font-display {
+    font-family: var(--font-arabic), var(--font-display);
+    letter-spacing: 0;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .text-hero-xl {
+    font-size: clamp(2.6rem, 8vw, 7.5rem);
+    line-height: 0.98;
+  }
+  .text-display-lg {
+    font-size: clamp(2.2rem, 5.2vw, 4.75rem);
+    line-height: 1.04;
+  }
+  .text-display-md {
+    font-size: clamp(1.75rem, 3.4vw, 3rem);
+    line-height: 1.1;
+  }
+  .text-numeral {
+    font-size: clamp(7rem, 16vw, 15rem);
+    line-height: 0.8;
+  }
+  .gold-rule {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+  }
+  .zellige-bg {
+    background-image:
+      linear-gradient(45deg, rgba(182, 154, 98, 0.12) 25%, transparent 25%, transparent 75%, rgba(182, 154, 98, 0.12) 75%),
+      linear-gradient(45deg, rgba(182, 154, 98, 0.12) 25%, transparent 25%, transparent 75%, rgba(182, 154, 98, 0.12) 75%);
+    background-size: 44px 44px;
+    background-position: 0 0, 22px 22px;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .arch-top {
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+  }
+  .blob-gold {
+    background: radial-gradient(circle at 30% 30%, rgba(182, 154, 98, 0.35), transparent 65%);
+    filter: blur(50px);
+  }
+  .blob-green {
+    background: radial-gradient(circle at 60% 40%, rgba(20, 42, 36, 0.55), transparent 65%);
+    filter: blur(60px);
+  }
+  .reveal {
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .hero-enter {
+    animation: heroEnter 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-zoom {
+    animation: heroZoom 24s ease-out forwards;
+  }
+  .float-slow {
+    animation: floatSlow 9s ease-in-out infinite;
+  }
+  .drift-blob {
+    animation: driftBlob 18s ease-in-out infinite;
+  }
+  .scroll-line {
+    animation: scrollLine 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+}
+
+@keyframes heroEnter {
+  0% { opacity: 0; transform: translateY(40px); filter: blur(6px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes heroZoom {
+  0% { transform: scale(1.02); }
+  100% { transform: scale(1.14); }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes driftBlob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.12); }
+}
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter, .hero-zoom, .float-slow, .drift-blob, .scroll-line {
+    animation: none;
+  }
+  .reveal {
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
