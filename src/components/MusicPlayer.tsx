@@ -7,6 +7,7 @@ const KEY = 'dar-el-ghalia-music';
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
+  const resumeAfterVideo = useRef(false);
 
   const play = useCallback(async () => {
     const a = audioRef.current;
@@ -42,6 +43,30 @@ export default function MusicPlayer() {
     return cleanup;
   }, [play]);
 
+  // Pause the music while the video plays, resume afterwards.
+  useEffect(() => {
+    const onVideoPlay = () => {
+      const a = audioRef.current;
+      if (a && !a.paused) {
+        resumeAfterVideo.current = true;
+        a.pause();
+        setPlaying(false);
+      }
+    };
+    const onVideoStop = () => {
+      if (resumeAfterVideo.current) {
+        resumeAfterVideo.current = false;
+        play();
+      }
+    };
+    window.addEventListener('dar-video-play', onVideoPlay);
+    window.addEventListener('dar-video-stop', onVideoStop);
+    return () => {
+      window.removeEventListener('dar-video-play', onVideoPlay);
+      window.removeEventListener('dar-video-stop', onVideoStop);
+    };
+  }, [play]);
+
   return (
     <>
       <audio ref={audioRef} src="/audio/ambiance.mp3" loop preload="none" />
@@ -50,7 +75,7 @@ export default function MusicPlayer() {
         onClick={playing ? pause : play}
         aria-label={playing ? 'Couper la musique' : 'Activer la musique'}
         aria-pressed={playing}
-        className="fixed bottom-5 start-5 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-accent/70 bg-primary/85 text-accent backdrop-blur transition-colors duration-500 hover:bg-accent hover:text-accent-foreground"
+        className="fixed bottom-5 end-5 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-accent/70 bg-primary/85 text-accent backdrop-blur transition-colors duration-500 hover:bg-accent hover:text-accent-foreground"
       >
         {playing ? (
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
