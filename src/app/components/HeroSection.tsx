@@ -43,7 +43,7 @@ export default function HeroSection() {
       <div ref={layerBack} className="absolute inset-0 -z-10 will-change-transform">
         <div className="hero-zoom absolute inset-0">
           <AppImage
-            src="https://img.rocket.new/generatedImages/rocket_gen_img_448ad6292-1790935445838.png"
+            src="/images/patio3.jpg"
             alt="Moroccan riad courtyard with carved arches and zellige tilework in warm evening light"
             fill
             priority

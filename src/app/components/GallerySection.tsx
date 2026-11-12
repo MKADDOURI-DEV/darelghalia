@@ -14,34 +14,34 @@ interface GalleryItem {
 
 const ITEMS: GalleryItem[] = [
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_11c05f051-1772250211690.png",
-  alt: 'Central courtyard of a Fès riad with arched colonnade',
-  span: 'col-span-2 row-span-2'
+  src: "/images/patio10.jpg",
+  alt: "Patio central de Dar El Ghalia",
+  span: "col-span-2 row-span-2"
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_1b809cd90-1776442523565.png",
-  alt: 'Suite bedroom with carved wooden ceiling and warm lamplight',
-  span: 'col-span-1 row-span-1'
+  src: "/images/elyasmine3.jpg",
+  alt: "Chambre au lit à tête sculptée",
+  span: "col-span-1 row-span-1"
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_18f63ddf4-1772062834433.png",
-  alt: 'Detail of hand-cut zellige tile mosaic in green and ivory',
-  span: 'col-span-1 row-span-1'
+  src: "/images/hammam8.jpg",
+  alt: "Fontaine en zellige",
+  span: "col-span-1 row-span-1"
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_12c94734a-1777055497176.png",
-  alt: 'Traditional Moroccan tagine served with olives and preserved lemon',
-  span: 'col-span-1 row-span-2'
+  src: "/images/alyacout5.jpg",
+  alt: "Salle du restaurant",
+  span: "col-span-1 row-span-2"
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_1c36a4f75-1772149908177.png",
-  alt: 'Rooftop terrace with Medina skyline at golden hour',
-  span: 'col-span-1 row-span-1'
+  src: "/images/terrasse.jpg",
+  alt: "Table dressée sur la terrasse",
+  span: "col-span-1 row-span-1"
 },
 {
-  src: "https://images.unsplash.com/photo-1649137389613-48fa246cc1e2",
-  alt: 'Lantern-lit alley in the old Medina of Fès',
-  span: 'col-span-2 row-span-1'
+  src: "/images/terrace7.jpg",
+  alt: "Vue sur la médina de Fès depuis la terrasse",
+  span: "col-span-2 row-span-1"
 }];
 
 

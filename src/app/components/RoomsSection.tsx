@@ -8,16 +8,20 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const ROOM_IMAGES = [
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_1cf78b66d-1784052318574.png",
-  alt: 'Suite with carved wooden ceiling, warm lamplight and traditional Moroccan bedding'
+  src: "/images/alguamra1.jpg",
+  alt: "Suite Sénior El Guamra, Dar El Ghalia"
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_1cf78b66d-1784052318574.png",
-  alt: 'Guest room with painted cedar woodwork and a traditional rug'
+  src: "/images/laaziza1.jpg",
+  alt: "Suite Sénior Laaziza, Dar El Ghalia"
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_4da9785d5-1792946792782.png",
-  alt: 'Quiet rooftop room with view toward Medina terraces at dusk'
+  src: "/images/alanbar2.jpg",
+  alt: "Suite Sénior Al Anbar, Dar El Ghalia"
+},
+{
+  src: "/images/lallarkia5.jpg",
+  alt: "Suite Royale Lalla Rkya, Dar El Ghalia"
 }];
 
 

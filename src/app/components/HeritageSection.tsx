@@ -17,7 +17,7 @@ export default function HeritageSection() {
             <div className="relative mx-auto max-w-md">
               <div className="arch-top relative aspect-[3/4] overflow-hidden border border-accent/60 bg-secondary">
                 <AppImage
-                  src="https://img.rocket.new/generatedImages/rocket_gen_img_1f01e49fd-1772210725810.png"
+                  src="/images/patio12.jpg"
                   alt="Carved plaster and zellige mosaic archway inside a historic Fès residence"
                   fill
                   sizes="(max-width: 1024px) 90vw, 40vw"

@@ -45,7 +45,7 @@ export default function CuisineSection() {
             <div className="grid h-full grid-cols-5 gap-4">
               <div className="relative col-span-3 aspect-[3/4] overflow-hidden border border-accent/60 lg:aspect-auto lg:min-h-[560px]">
                 <AppImage
-                  src="https://images.unsplash.com/photo-1674637840293-243ae319f7ca"
+                  src="/images/alyacout11.jpg"
                   alt="Slow-cooked Moroccan tagine with preserved lemon and olives on a rustic table"
                   fill
                   sizes="(max-width: 1024px) 60vw, 28vw"
@@ -55,7 +55,7 @@ export default function CuisineSection() {
               <div className="col-span-2 flex flex-col gap-4">
                 <div className="relative aspect-square overflow-hidden border border-accent/60">
                   <AppImage
-                    src="https://img.rocket.new/generatedImages/rocket_gen_img_1b1bf229b-1772768377008.png"
+                    src="/images/fathezzahr10.jpg"
                     alt="Fresh Moroccan spices in small bowls under warm light"
                     fill
                     sizes="(max-width: 1024px) 40vw, 18vw"

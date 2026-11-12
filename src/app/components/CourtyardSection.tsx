@@ -13,7 +13,7 @@ export default function CourtyardSection() {
       <div className="relative isolate min-h-[70vh] overflow-hidden bg-primary">
         <div className="absolute inset-0 -z-10">
           <AppImage
-            src="https://img.rocket.new/generatedImages/rocket_gen_img_1a7e4a4f8-1783858393331.png"
+            src="/images/patio10.jpg"
             alt="Moroccan courtyard with central fountain, zellige floor and carved cedar balconies"
             fill
             sizes="100vw"
@@ -50,7 +50,7 @@ export default function CourtyardSection() {
       <div className="mx-auto grid max-w-[1440px] gap-0 px-0 md:grid-cols-12 md:px-12">
         <div className="relative aspect-[16/10] md:col-span-7 md:aspect-auto md:min-h-[420px]">
           <AppImage
-            src="https://images.unsplash.com/photo-1668938455453-7bac2d89423f"
+            src="/images/terrasse.jpg"
             alt="Rooftop terrace overlooking Medina rooftops at golden hour"
             fill
             sizes="(max-width: 768px) 100vw, 58vw"
