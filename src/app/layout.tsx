@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { Manrope, Cormorant_Garamond, Noto_Naskh_Arabic } from 'next/font/google';
 import '../styles/tailwind.css';
 import { LanguageProvider } from '@/context/LanguageContext';
+import MusicPlayer from '@/components/MusicPlayer';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -60,6 +61,7 @@ export default function RootLayout({
     >
       <body className={manrope.className}>
         <LanguageProvider>{children}</LanguageProvider>
+        <MusicPlayer />
 
         <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdarelghali2254back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.21" />
         <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.3" /></body>
