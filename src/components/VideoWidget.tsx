@@ -85,7 +85,7 @@ export default function VideoWidget() {
       ) : (
         <video
           ref={videoRef}
-          src="/video/dar-el-ghalia.mp4"
+          src="/video/dar-el-ghalia-full.mp4"
           poster="/video/poster.jpg"
           controls
           playsInline
